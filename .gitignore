@@ -1,0 +1,59 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+out/
+target/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+secrets/
+
+# IDE / editor
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Logs and caches
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.cache/
+.turbo/
+.parcel-cache/
+coverage/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# App / OS
+*.local
+*.tmp
+*.temp
+.folio/
+library/
+*.epub
+*.mobi
+*.azw*
+*.pdf
+!docs/**/*.pdf
