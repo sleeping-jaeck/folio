@@ -24,6 +24,15 @@ target/
 *.key
 credentials.json
 secrets/
+key.properties
+*.jks
+*.keystore
+
+# Dart / Flutter
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+packages/folio_core/tool/fixtures/
 
 # IDE / editor
 .idea/

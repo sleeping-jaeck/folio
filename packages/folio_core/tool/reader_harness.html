@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Folio reader harness</title>
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; }
+  foliate-view { display: block; width: 100%; height: 100%; }
+</style>
+<script>
+  // Stands in for the flutter_inappwebview bridge when testing reader.js in a
+  // desktop browser: python -m http.server from the repo root, then open
+  // /packages/folio_core/tool/reader_harness.html?book=<url>
+  window.__events = []
+  window.flutter_inappwebview = {
+    callHandler(name, data) {
+      window.__events.push({ name, data })
+      if (name === 'jsReady') {
+        const book = new URLSearchParams(location.search).get('book')
+        if (book) window.folio.open(book, null, { theme: 'sepia', fontSize: 110 })
+      }
+      return Promise.resolve()
+    },
+  }
+</script>
+<script type="module" src="../assets/reader/reader.js"></script>
+</head>
+<body></body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' blob: data: https://appassets.androidplatform.net; script-src 'self' https://appassets.androidplatform.net; style-src 'self' 'unsafe-inline' blob: https://appassets.androidplatform.net; img-src 'self' blob: data: https://appassets.androidplatform.net; font-src 'self' blob: data: https://appassets.androidplatform.net; connect-src 'self' blob: https://appassets.androidplatform.net; frame-src blob: 'self';">
+<title>Folio reader</title>
+<style>
+  html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    background: var(--folio-bg, #ffffff);
+    -webkit-tap-highlight-color: transparent;
+  }
+  foliate-view {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+</style>
+<script type="module" src="reader.js"></script>
+</head>
+<body></body>
+</html>

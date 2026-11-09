@@ -1,0 +1,31 @@
+name: folio_core
+description: Folio offline reader core (library store, EPUB metadata, WebView reader bridge).
+version: 0.1.0
+publish_to: none
+
+environment:
+  sdk: ^3.9.0
+  flutter: ">=3.35.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  archive: ^4.0.7
+  # 6.1.x's Android plugin uses getDefaultProguardFile('proguard-android.txt'),
+  # which Android Gradle Plugin 9 rejects; the 6.2 line fixes it.
+  flutter_inappwebview: 6.2.0-beta.3
+  path: ^1.9.0
+  path_provider: ^2.1.5
+  sqflite: ^2.4.2
+  xml: ^6.5.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  assets:
+    - assets/reader/
+    - assets/foliate/
+    - assets/foliate/vendor/
